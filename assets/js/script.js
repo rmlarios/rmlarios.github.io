@@ -159,6 +159,20 @@ function scroll() {
       paginationSpeed : 400,
       singleItem:true,
   });
+   
+  $("#tech-container").owlCarousel({
+ 
+    navigation : false, // Show next and prev buttons
+    slideSpeed : 500,
+    paginationSpeed : 300,
+    singleItem: false,
+    loop: true,
+    rewind: true,
+    autoPlay: true,
+    autoplayTimeout: 1000,
+    items: 4,
+    stopOnHover: true
+});
  
 });
 
@@ -180,6 +194,6 @@ var map=new google.maps.Map(document.getElementById("googleMap")
   ,mapProp);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+//google.maps.event.addDomListener(window, 'load', initialize);
 
 
