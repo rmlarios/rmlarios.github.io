@@ -1,0 +1,74 @@
+.flex-direction-nav li {
+  position: absolute;
+  height: 100%;
+  width: 40px;
+  top: 0;
+}
+
+.flex-direction-nav li:first-child {
+  left: 0;
+}
+
+.flex-direction-nav li:last-child {
+  right: 0;
+}
+
+.flex-direction-nav li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+
+  transition: background-color 0.2s;
+}
+
+.flex-direction-nav li a::before, .flex-direction-nav li a::after {
+  /* left and right arrows in css only */
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 13px;
+  background-color: white;
+}
+
+.flex-direction-nav li a::before {
+  transform: translateY(-35px) rotate(45deg);
+}
+
+.flex-direction-nav li a::after {
+  transform: translateY(-27px) rotate(-45deg);
+}
+
+.flex-direction-nav li:last-child a::before {
+  transform: translateY(-35px) rotate(-45deg);
+}
+
+.flex-direction-nav li:last-child a::after {
+  transform: translateY(-27px) rotate(45deg);
+}
+
+.cd-testimonials-all {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+  
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+.cd-testimonials-all.is-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
